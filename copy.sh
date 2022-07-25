@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/bash
 
 #Set de la varibale J-1 avec affichage : YYYYMMJJ
 j_1=`date -d "$(date +%Y-%m-%d) -3 day" +%Y%m%d`
