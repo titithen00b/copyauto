@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 #Set de la varibale J-1 avec affichage : YYYYMMJJ
 j_1=`date -d "$(date +%Y-%m-%d) -3 day" +%Y%m%d`
@@ -13,7 +13,9 @@ fi
 
 
 
-for i in $(ls | grep "$j_1") 
+for i in $(ls -l | grep "$j_1") 
 do
-echo test
+if [ "$param" = "1" ]
+then zip "$i" && cp "$i" /volumeUSB/usbshare/BACKUP/
+else echo off
 done
